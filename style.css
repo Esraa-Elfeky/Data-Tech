@@ -1,0 +1,134 @@
+*{
+    padding:0;
+    margin:0;
+    font-family:sans-serif;
+}
+body{
+    background:linear-gradient(#020636,#608cf9);
+    height: 100vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+   .container{
+    width:80%;
+    min-height:80%;
+    background:rgba(255,255,255,0.1);
+   border-radius:20px;
+}
+
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    width:80%;
+    margin:auto ;
+    padding : 20px 0 ;
+}
+
+nav .logo{
+    color:white;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+nav ul li {
+    display : inline-block;
+    margin: 0 8px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+nav ul li a:hover{
+    color:#6a93fb;
+}
+ .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    width: 75%;
+    margin:auto;
+    
+ }
+.content .text{
+    color :#020636;
+    width: 100%;
+}
+ .content .text h2 {
+    font-size:40px;
+    text-transform:uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color:#020636;
+ }
+ .content .text p {
+    font-size: 18px;
+    line-height: 25px;
+    margin:10px 0 ;
+    letter-spacing: 1px;
+    color: #1a233a;
+ } 
+ .content .image{
+    width: 45%;
+    height:90%;
+ }
+.content .text .mybutton{
+    background: #e6ede6;
+    color:#020636;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    padding: 7px;
+    cursor : pointer;
+    border:none;
+    border-radius: 10px;
+    width:20%;
+    transition:transform .2s;
+    
+}
+.mybutton:hover{
+        transform: scale(1.05);  
+}
+
+.hamburger {
+ display:none;
+ flex-direction:column;
+ gap:5px;
+ cursor:pointer;
+}
+.hamburger span{
+    width:30px;
+    height:3px;
+    background-color:#fff;
+    border-radius:5px;
+}
+@media (max-width:768px){
+    .nav-links{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color:#020636;
+        flex-direction: column;
+        gap: 1rem;
+        padding : 1rem;
+        display:none;
+    }
+    .nav-links.active{
+        display:flex;
+    }
+    .hamburger {
+        display:flex;
+    }
+
+}
